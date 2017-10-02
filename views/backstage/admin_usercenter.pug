@@ -1,0 +1,50 @@
+extends admin_layout.pug
+
+block content
+    #content
+      #nav_top
+        span.nav_title 设置 / 个人中心
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body.userCenter
+        h3 管理员信息
+        #userCenter
+          .row
+            .col-sm-3 管理员ID :
+            #userId.col-sm-9 #{userId}
+          .row
+            .col-sm-3 用户名 :
+            #userName.col-sm-9 #{userName}
+          .row
+            .col-sm-3 用户头像 :
+            #userAvatar.col-sm-9
+              img(src="/images/userAvatar/" + userAvatar, alt='用户头像', width='36', height='36')
+          .row
+            .col-sm-3 用户角色 :
+            #userRole.col-sm-9 #{userRole}
+          .row
+            .col-sm-3 注册时间 :
+            #userDate.col-sm-9 #{userDate}
+          .row
+            .col-sm-3 邮箱 :
+            #userEmail.col-sm-9 #{userEmail}
+          .row
+            .col-sm-3 注册地址 :
+            #userPlace.col-sm-9 #{userPlace}
+          .row
+            .col-sm-2.col-sm-offset-1
+              button#editUser.btn.btn-info(href='#') Edit
+          form#userForm.form-horizontal(action='/admin/usercenter/uploadAvatar', method='post',encype = "multipart/form-data")
+            .form-group
+              label.col-sm-2.control-label(for='userAvatar') 用户头像
+              .col-sm-10
+                input#registerAvatar.form-control(type='file',name="userAvatar",required)
+            .form-group
+              .col-sm-offset-1.col-sm-10
+                button.btn.btn-info(type='submit') 提交用户头像
+         
+    
+    

@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 日志
+    link(rel='stylesheet', type='text/css', href='/stylesheets/reset.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/blog.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/github-markdown.css')
+  body
+    #container
+      #blog_head
+        a(href='')
+          h3 levinhax's blog
+      nav#navbar.navbar
+        #menu_button
+          span
+          span
+          span
+        .clearfix
+        ul#menu_list
+          li
+            a(href='/blog', title='') 首页
+          li
+            a(href='/blog/archives', title='') 归档
+          li
+            a(href='/blog/tags', title='') 标签
+      // 文章内容区域
+      #blog_content
+        for blog in blogs
+          .list
+            h2.blog_title
+              a.blog_link(href="/blog/details/" + blog.articleId) #{blog.articleTitle}
+            p.blog_author
+              | 作者: 
+              span #{blog.articleAuthor}
+            p.blog_date
+              | 发表于: 
+              span.blog_date #{blog.articleDate}
+            .blog_content.markdown-body !{blog.articleText}
+          // a.read_more(href="/blog/details/" + blog.articleId) 阅读更多 →
+      // 底部
+      footer
+        p
+          span#time_now
+          |                   |  levinhax
+    a#totop(href='javascript:;') ↑
+    canvas#canvas
+    script(src='/javascripts/getDate.js')
+    script(src='/javascripts/bg_canvas2.js')
+    script(src='/javascripts/toTop.js')
+    script(src='/javascripts/formatTime.js')
+    

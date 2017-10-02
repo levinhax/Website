@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title 用户登录
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/log.css')
+  body
+    h3 Welcome
+    #log_box
+      h4 用户登录
+      form.form(action='/blog/login', method='post')
+        .form-group
+          label.sr-only(for='userEmail') userEmail
+          .input-group
+            .input-group-addon
+              span.glyphicon.glyphicon-envelope
+            input#userEmail.form-control(type='email', name='userEmail', placeholder='用户邮箱', required='')
+        .form-group
+          label.sr-only(for='userPass') userPass
+          .input-group
+            .input-group-addon
+              span.glyphicon.glyphicon-lock
+            input#userPass.form-control(type='password', name='userPass', placeholder='用户密码', required='')
+        button#btn_login.btn.btn-info(type='submit') Login
+        p#alert_msg #{alert_msg}
+        a(href='/user/register') 去注册账号
+    script(src='/javascripts/jquery-3.1.1.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/blog_login.js')
+

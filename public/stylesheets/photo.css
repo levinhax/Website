@@ -1,0 +1,225 @@
+.photography-section{
+    width:100%; 
+    background-color: #e2e2e2;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.photography-title{
+    width:100%;
+    padding-top: 16px 0;
+}
+.photography-title h2{
+    font-size: 32px;
+    font-weight: 400;
+    color: #33CCFF;
+    text-align: center;
+    text-shadow: 2px 2px 5px #33CCFF;
+    margin-top: 40px;
+}
+.photography-title .photography-menu{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.photography-title .photography-menu a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    padding: 0 9px;
+}
+.photography-section .photography-content{
+    width:72%;
+    margin:45px auto 0;
+    background-color: #eaeaea;
+    padding:0px 16px;
+    border:1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/*==================== photo item ==============================*/
+.photography-content .photo_item{
+    margin:10px auto;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #a3a3a3;
+    position: relative;
+}
+.photo_item .item_title{
+    margin-top: 42px;
+}
+.photo_item .item_title a{
+    color:#222;
+    font-size: 26px;
+    transition: all 0.5s ease;
+}
+.photo_item .item_title a:hover{
+    color: #424242;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3)
+}
+.photo_item .item_title p{
+    font-size: 14px;
+    font-weight: 300;
+    color:#222;
+    line-height: 24px;
+    margin-top: 28px;
+    margin-bottom: 18px;
+}
+.photo_item .item_img{
+    display: inline-block;
+    width:100%;
+    height: auto;
+}
+.photo_item .item_more{
+    display: inline-block;
+    width:186px;
+    height: 40px;
+    font-size: 16px;
+    color:#5e5e5e;
+    text-align: center;
+    line-height: 40px;
+    border:1px solid #5e5e5e;
+    border-radius: 4px;
+    margin-top: 36px;
+    margin-bottom: 35px;
+}
+.photo_item .item_info{
+    font-size: 14px;
+    color:#5e5e5e;
+}
+.photo_item .item_info a{
+    color: #3e3e3e;
+}
+
+/*分页*/
+#paging{
+    width: 72%;
+    height: 50px;
+    margin: 20px auto 0;
+    box-sizing: border-box;
+    position: relative;
+}
+#paging nav{
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+#paging nav ul li{
+    display: inline-block;
+}
+#paging nav ul a{
+    color: #333;
+    font-size: 16px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+#pageMsg{
+    position: absolute;
+    left: 280px;
+    top: 6px;
+    font-size: 16px;
+}
+#pageMsg .pageNow {
+    color: #337ab7;
+    padding: 0 4px;
+    font-size: 16px;
+}
+#pageMsg .pageCount{
+    padding: 0 4px;
+}
+#pageMsg input{
+    display: inline-block;
+    width: 24px;
+    margin: 0 5px;
+    padding: 0 3px;
+}
+
+
+@media screen and (max-width: 750px) {
+    /*============= photography section ==========*/
+.photography-section .photography-content{
+    width:94%;
+}
+
+/*分页*/
+#paging{
+    width: 94%;
+}
+#paging nav{
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+
+#pageMsg{
+    position: absolute;
+    left: 5px;
+    top: 32px;
+    font-size: 16px;
+}
+
+
+}
+
+
+/*分档*/
+.photography_list{
+    width: 720px;
+    max-width: 800px;
+    height: auto;
+    font-size: 1rem;
+    margin: 110px auto 0;
+    padding: 0px 0px 62px;
+    box-sizing: border-box;
+    position: relative;
+    border-left: 4px solid #bbb;
+    z-index: 10;
+}
+.list_item_circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 8px;
+}
+.list_header{
+    position: relative;
+    left: -7px;
+    top: -8px;
+    margin-bottom: 64px;
+}
+
+.list_item{
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 2px dotted #bbb;
+    position: relative;
+    left: -2px;
+    transition: all ease .5s;
+}
+.list_item .list_item_circle{
+    width: 8px;
+    height: 8px;
+    background-color: #888;
+    position: relative;
+    left: -4px;
+}
+.list_item .list_item_date{
+    margin-right: 12px;
+}
+.list_item .list_item_title a{
+    color: #222;
+    text-decoration: none;
+}
+.list_item_tag{
+    margin-left: 16px;
+}
+.list_item:hover{
+    border-bottom-color: #333;
+}
+.list_item:hover .list_item_circle{
+    background-color: #333;
+}

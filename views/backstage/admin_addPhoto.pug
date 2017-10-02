@@ -1,0 +1,39 @@
+extends admin_layout.pug
+
+block content
+    #content
+      #nav_top
+        span.nav_title 添加数据 / 添加相册
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body.addArticle
+        form.form-horizontal(action='/admin/photo/add', method='post', accept-charset='utf-8')
+          .form-group
+            label.col-sm-2.control-label(for='photoTitle') 相册标题
+            .col-sm-10
+              input#photoTitle.form-control(type='text', name='photoTitle')
+          .form-group
+            label.col-sm-2.control-label(for='photoDate') 日期
+            .col-sm-10
+              input#photoTime.form-control(type='date', name='photoDate')
+          .form-group
+            label.col-sm-2.control-label(for='photoTag') 标签
+            .col-sm-10
+              input#photoTag.form-control(type='text', name='photoTag')
+          .form-group
+            label.col-sm-2.control-label(for='photoImg') 图片
+            .col-sm-10
+              input#photoImg.form-control(type='file', name='photoImg')
+          .form-group
+            label.col-sm-2.control-label(for='articleDesc') 相册描述
+            .col-sm-10
+              textarea#photoDecs.form-control(name='photoDesc')
+          .form-group
+            .col-sm-offset-9.col-sm-3
+              a.btn_cancel.btn.btn-default(href='/admin/index') 取消
+              button#btn_login.btn.btn-info(type='submit') 确定
+    
+    

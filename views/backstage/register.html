@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>用户注册</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/log.css">
+    </head>
+    <body>
+        <h3>Welcome</h3>
+        <div id="log_box">
+            <h4>Create an account</h4>
+            <p>All fields are mandatory</p>
+            <form id="register" class="form" action="/user/register" method="post">
+                <div class="form-group">
+                    <label class="sr-only" for="userName">userName</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名" maxlength="25" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="userPass">userPass</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input type="password" class="form-control" id="userPass" name="userPass" placeholder="用户密码" maxlength="18" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="userPass2">userPass2</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input type="password" class="form-control" id="userPass2" name="userPass2" placeholder="确认密码" maxlength="18" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="userEmail">userEmail</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                        <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="邮箱" maxlength="30" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="userPlace">userPlace</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></div>
+                        <input type="text" class="form-control" id="userPlace" name="userPlace" placeholder="注册地址" maxlength="10" required>
+                    </div>
+                </div>
+                <button type="submit" id="btn_register" class="btn btn-info">Register</button>
+                <p id="alert_msg"></p>
+                <a href="/user/login">已有账号，直接登录</a>
+            </form>
+        </div>
+
+
+        <script src="/javascripts/jquery-3.1.1.min.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/check.js"></script>
+        <script src="/javascripts/register.js"></script>
+    </body>
+</html>

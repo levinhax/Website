@@ -1,0 +1,20 @@
+extends admin_layout.pug
+
+block content
+    #content
+      #nav_top
+        span.nav_title 首页 / 说明
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body.admin_explain
+        h3 node_website 后台管理系统
+        p 后台登录注册的为普通管理员
+        p 普通管理员可以查看，添加，修改以及删除自己所属的信息
+        p 超级管理员拥有一切权限
+        p 该项目所有图片均在 /public/images下
+    
+
+

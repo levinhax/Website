@@ -1,0 +1,1 @@
+INSERT INTO `projects`(`projectId`, `projectTitle`, `projectAuthor`, `projectTime`, `projectTag`, `projectPhoto`) VALUES (1, 'node 搭建个人网站', 'levinhax', '2017/9 - 2017/10', 'website', 'project001.png');

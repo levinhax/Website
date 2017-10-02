@@ -1,0 +1,289 @@
+/*================= resume section ==========================*/
+.resume-section{
+    width:100%;
+    height: 100%;
+    color: #f6f7ff;
+    background-color: #002839;
+    /*background-color: rgba(0,40,57);*/
+    padding-top: 50px;
+    padding-bottom: 140px;
+    position: relative;
+}
+
+.resume-section .bg-line{
+    width:5px;
+    height: 100%;
+    background-color: #999;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/*============================ resume header =======================*/
+.resume-section .resume-header{
+    width: 100px;
+    text-align: center;
+    margin: 120px auto;
+    position: relative;
+}
+
+.resume-section .resume-header .avatar{
+    width:106px;
+    height: 106px;
+    border-radius: 50% 50%;
+    overflow: hidden;
+}
+.resume-header .avatar img{
+    width:100%;
+    height: 100%;
+}
+.resume-header h2{
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 42px;
+}
+.resume-header h4{
+    font-size: 18px;
+}
+
+/*============================== resume title ==========================*/
+.resume-title{
+    width:100px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+}
+.resume-title span{
+    display: block;
+    box-sizing: border;
+    width: 100px;
+    height: 100px;
+    color: #002839;
+    border: 3px solid #f6f7ff;
+    border-radius: 50% 50%;
+    font-size: 26px;
+    line-height: 100px;
+    /*background-color: #555;*/
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+.resume-title:hover span{
+    /*transform: scale(1.05);*/
+    transform: rotate(360deg);
+}
+
+/*================================= resume item =======================*/
+.resume_item{
+    width:100%;
+    margin: 120px auto;
+    position: relative;
+    cursor: pointer;
+}
+.resume_item .fa{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+}
+.resume_item h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 50px;
+    position: absolute;
+    left:50%;
+    margin-left: 56px;
+}
+.item_content{
+    width: 100%;
+    padding: 42px 0 32px;
+    position: relative;
+    top:80px;
+    background-color: #101010;
+}
+
+/*======================== personal data =====================================*/
+
+.fa_personal_data{
+    background-image: url(../images/fa/personal_data.png);
+}
+.personal_data .item_content{
+    display: none;
+}
+.personal_data table{
+    margin: 0px auto;
+    color: #fff;
+    font-weight: 500;
+}
+.personal_data table tr{
+    text-align: left;
+    border-top: 1px solid rgba(90,90,90,0.5);
+} 
+.personal_data table th{
+    font-size: 16px;
+    padding: 9px 148px 9px 6px;
+}
+.personal_data table td{
+    font-size: 16px;
+    padding: 9px 148px 9px 6px;
+}
+
+/*============================= skills ===============================*/
+.fa_slills{
+    background-image: url(../images/fa/skills.png);
+}
+.skills .item_content{
+    color: #fff;
+    font-size: 16px;
+    display: none;
+}
+.skills .item_content ul{
+    width: 36%;
+    margin: 0 auto;
+}
+.skills .item_content li{
+    height: 36px;
+    line-height: 36px;
+}
+.skills .item_content span{
+    padding:0 6px;
+}
+.skills .item_content progress{
+    display: inline-block;
+    margin-top: 3px;
+    float: right;
+}
+ 
+/*========================== education =========================*/
+.fa_education{
+    background-image: url(../images/fa/education.png);
+}
+.education .item_content{
+    display: none;
+}
+.education .item_content p{
+    font-size: 16px;
+    text-align: center;
+}
+
+/*============================= experience ============================*/
+.fa_experience{
+    background-image: url(../images/fa/p_experience.png);
+}
+.experience .item_content{
+    display: none;
+}
+.experience .item_content .item_list{
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+    margin: 0 auto;
+}
+.experience .item_list span{
+    padding:5px 36px;
+    font-size: 16px;
+}
+.experience .item_list .list_name{
+    font-size: 24px;
+    font-weight: 300;
+    padding: 5px 18px;
+    border: 2px solid #f6f7ff;
+}
+
+
+
+
+@media screen and (max-width: 750px){
+
+/*================================= resume item =======================*/
+.resume_item h3{
+    font-size: 18px;
+}
+
+
+/*======================== personal data =====================================*/
+
+.personal_data table th{
+    font-size: 16px;
+    padding: 9px 56px 9px 6px;
+}
+.personal_data table td{
+    font-size: 16px;
+    padding: 9px 56px 9px 6px;
+}
+
+/*============================= skills ===============================*/
+.skills .item_content ul{
+    width: 60%;
+    margin: 0 auto;
+}
+.skills .item_content span{
+    padding:0 6px;
+}
+.skills .item_content progress{
+    display: inline-block;
+    margin-top: 3px;
+    float: right;
+}
+
+/*============================= experience ============================ */
+
+.experience .item_content .item_list{
+    width: 100%;
+}
+.experience .item_list span{
+    padding:5px 20px;
+    font-size: 16px;
+}
+.experience .item_list .list_name{
+    font-size: 24px;
+    padding: 5px 14px;
+}
+ 
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 490px){
+
+
+/*============================= skills ===============================*/
+.skills .item_content ul{
+    width: 80%;
+    margin: 0 auto;
+}
+.skills .item_content span{
+    padding:0 6px;
+}
+.skills .item_content progress{
+    display: inline-block;
+    margin-top: 3px;
+    float: right;
+}
+ 
+
+/*============================= experience ============================ */
+
+.experience .item_list span{
+    padding:5px 10px;
+    font-size: 14px;
+}
+.experience .item_list .list_name{
+    font-size: 16px;
+    padding: 5px 8px;
+}
+
+}

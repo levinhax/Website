@@ -1,0 +1,31 @@
+extends admin_layout.pug
+
+block content
+    #content
+      #nav_top
+        span.nav_title 添加数据 / 添加日志
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body.addArticle
+        form.form-horizontal(action='/admin/article/add', method='post', accept-charset='utf-8')
+          .form-group
+            label.col-sm-2.control-label(for='articleTitle') 文章标题
+            .col-sm-10
+              input#articleTitle.form-control(type='text', name='articleTitle')
+          .form-group
+            label.col-sm-2.control-label(for='articleTag') 标签
+            .col-sm-10
+              input#articleTag.form-control(type='text', name='articleTag')
+          .form-group
+            label.col-sm-2.control-label(for='articleText') 文章内容
+            .col-sm-10
+              textarea#articleDecsription.form-control(name='articleText')
+          .form-group
+            .col-sm-offset-9.col-sm-3
+              a.btn_cancel.btn.btn-default(href='/admin/index') 取消
+              button#btn_login.btn.btn-info(type='submit') 确定
+    
+    

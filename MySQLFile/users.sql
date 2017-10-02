@@ -1,0 +1,2 @@
+INSERT INTO `users`(`userId`, `userName`, `userPass`, `userDate`, `userEmail`, `userPlace`, `userAvatar`, `userRole`) VALUES (1, 'admin', 'admin', '2017-10-02 15:15:02', 'admin@qq.com', 'China', 'avatar.jpg', 0);
+INSERT INTO `users`(`userId`, `userName`, `userPass`, `userDate`, `userEmail`, `userPlace`, `userAvatar`, `userRole`) VALUES (2, 'levinhax', 'pass1234', '2017-10-02 21:50:44', 'levin1229@163.com', 'China', 'avatar.jpg', 1);

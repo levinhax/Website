@@ -1,0 +1,44 @@
+body{
+    background-color: #006839;
+}
+h3{
+    color: #efefef;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 110px auto 9px;
+}
+#log_box{
+    width: 440px;
+    background-color: #fefefe;
+    border-radius: 5px;
+    /*box-shadow: 1px 1px 1px #fefefe;*/
+    box-sizing: border-box;
+    padding: 18px 26px 36px;
+    margin: 0 auto;
+    position: relative;
+}
+#log_box h4,p{
+    text-align: center;
+}
+#log_box p{
+    letter-spacing: 1px;
+}
+#btn_register{
+    width: 100%;
+    letter-spacing: 1px;
+}
+#btn_login{
+    width: 100%;
+    letter-spacing: 1px;
+}
+#log_box form a{
+    position: absolute;
+    right: 26px;
+    bottom: 5px;
+}
+#alert_msg{
+    color: red;
+    position: absolute;
+    left: 28px;
+    bottom: 0px;
+}

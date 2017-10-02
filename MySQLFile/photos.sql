@@ -1,0 +1,1 @@
+INSERT INTO `photos`(`photoId`, `photoTitle`, `photoDate`, `photoAuthor`, `photoTag`, `photoImg`, `photoDesc`) VALUES (1, '秦时明月', '2017-10-02 00:00:00', 'levinhax', '动漫', 'Photo1.jpeg', '秦时明月，最喜欢的一部国产动漫');

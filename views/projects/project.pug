@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='keywords', content='html5,响应式,作品展示,个人作品展示,作品展示网站,levinhax')
+    meta(name='description', content='作品展示,个人作品展示,作品展示网站,levinhax,作品,网站,JavaScript,react,node,python,前端工程师')
+    title 作品
+    link(rel='stylesheet', type='text/css', href='/stylesheets/reset.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/base.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/project.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js')
+  body
+    // 导航栏
+    nav#navbar.navbar
+      .nav-content
+        #nav-header
+          a(href='/') Levin
+        #menu-button
+          span
+          span
+          span
+        .clearfix
+        ul#menu-list
+          li
+            a(href='/') 首页
+          li
+            a(href='/blog') 日志
+          li.active
+            a(href='/project') 项目简介
+          li
+            a(href='/photo') 相册
+          li
+            a(href='/about') 关于
+    // 导航栏 end
+    // project section start
+    section#project.project-section
+      h2.project_title PROJECT
+      .btns
+        a.btn(href='javascript:;') 全部
+        a.btn(href='javascript:;') 网站
+        a.btn(href='javascript:;') React
+        a.btn(href='javascript:;') Node
+        a.btn(href='javascript:;') Python
+        a.btn(href='javascript:;') 其他
+      .project_content
+        for project in projects
+          .item(class='item_' + project.projectTag)
+            .item-img
+              img(src='images/projects/'+ project.projectPhoto, alt=''+ project.projectPhoto)
+            a(href="/project/" + project.projectId)
+              i.fa_link
+            .item_caption
+              p #{project.projectTitle}
+              p #{project.projectTime}
+    // portfolio section end
+    // == footer content ==
+    footer
+      .contact_info
+        div 电话 : 15022387010
+        div 地址 : 天津市滨海新区
+        div 邮箱 : levin1229@163.com
+      .footer-copyright
+        | Copyright © 2017.Company name All rights reserved.
+    // == footer content end ==
+    script(src='/javascripts/navbar.js')
+    script(src='/javascripts/project.js')

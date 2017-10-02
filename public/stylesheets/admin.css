@@ -1,0 +1,187 @@
+/*admin index*/
+
+
+/* ======================== 数据管理 ========================== */
+#content_body table a{
+    margin-right: 5px;
+}
+
+/*分页*/
+#paging{
+    margin-left: 30px;
+    position: relative;
+}
+#paging nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#paging nav ul{
+    margin: 0;
+}
+#paging nav ul a{
+    cursor: pointer;
+}
+/*#paging nav ul .page:visited{
+    color: #fefefe;
+    background-color: #337ab7;
+}*/
+#pageMsg{
+    position: absolute;
+    left: 300px;
+    top: 6px;
+}
+#pageMsg .pageNow {
+    color: #337ab7;
+    padding: 0 4px;
+    font-size: 16px;
+}
+#pageMsg .pageCount{
+    padding: 0 4px;
+}
+#pageMsg input{
+    display: inline-block;
+    width: 24px;
+    margin: 0 5px;
+    padding: 0 3px;
+}
+/*========================  日志列表 ====================== */
+/*编辑内容*/
+#editArticle{
+    width: 720px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 104px;
+    margin-left: -360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #fefefe;
+    z-index: 10;
+    display: none;
+}
+#editArticle h3{
+    color: #222;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding-left: 9px;
+}
+#editArticle .close{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    font-size: 32px;
+}
+#editArticle form{
+    margin-top: 32px;
+}
+
+
+
+ /*================================ 评论列表 ============================ */
+ /*编辑内容*/
+#editProject{
+    width: 720px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 104px;
+    margin-left: -360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #fefefe;
+    z-index: 10;
+    display: none;
+}
+#editProject h3{
+    color: #222;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding-left: 9px;
+}
+#editProject .close{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    font-size: 32px;
+}
+#editProject form{
+    margin-top: 32px;
+}
+
+
+ /*================================ 相册列表 ============================ */
+ /*编辑内容*/
+#editPhoto{
+    width: 720px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 104px;
+    margin-left: -360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #fefefe;
+    z-index: 10;
+    display: none;
+}
+#editPhoto h3{
+    color: #222;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding-left: 9px;
+}
+#editPhoto .close{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    font-size: 32px;
+}
+#editPhoto form{
+    margin-top: 32px;
+}
+
+
+/* ===========================  添加数据 =========================== */
+/*添加文章*/
+.addArticle form{
+    width: 72%;
+    margin: 60px auto 0;
+}
+
+
+
+
+/*================================= 设置 ==================================*/
+/*用户中心*/
+.userCenter h3{
+    text-align: center;
+    margin: 60px auto 40px;
+}
+#userCenter{
+    width: 600px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0 auto;
+}
+#userCenter input{
+    color: #000;
+}
+
+#userCenter form{
+    margin-top: 40px;
+    display: none;
+}
+
+/*================================== 说明 =========================*/
+.admin_explain{
+    text-align: center;
+    padding-top: 60px;
+}

@@ -1,0 +1,21 @@
+extends blog_layout.pug
+
+block blogcontent
+    .list
+      h2.blog_title
+        a(href='') #{blog.articleTitle}
+      p.blog_author
+        | 作者: 
+        span #{blog.articleAuthor}
+      p.blog_date
+        | 发表于: 
+        span.blog_date #{blog.articleDate}
+      #blog_content
+        .blog_content.markdown-body !{blog.articleText}
+    #page_turning
+      a.paging_l(href="/blog/details/" + prev_Id)
+        | ←
+        span 上一篇
+      a.paging_r(href="/blog/details/" + next_Id)
+        span 下一篇
+        | →   

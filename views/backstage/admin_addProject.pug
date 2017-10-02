@@ -1,0 +1,40 @@
+extends admin_layout.pug
+
+block content
+    #content
+      #nav_top
+        span.nav_title 添加数据 / 添加作品
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body.addArticle
+        form.form-horizontal(action='/admin/project/add', method='post', accept-charset='utf-8')
+          .form-group
+            label.col-sm-2.control-label(for='projectTitle') 项目标题
+            .col-sm-10
+              input#projectTitle.form-control(type='text', name='projectTitle')
+          .form-group
+            label.col-sm-2.control-label(for='photoTag') 项目标签
+            .col-sm-10
+              select.form-control(name='projectTag')
+                option website
+                option react
+                option node
+                option python
+                option other
+          .form-group
+            label.col-sm-2.control-label(for='projectTime') 项目时间
+            .col-sm-10
+              input#projectTime.form-control(type="text", name='projectTime')
+          .form-group
+            label.col-sm-2.control-label(for='projectPhoto') 项目图片
+            .col-sm-10
+              input#projectPhoto.form-control(type='file', name='projectPhoto')
+          .form-group
+            .col-sm-offset-9.col-sm-3
+              a.btn_cancel.btn.btn-default(href='/admin/index') 取消
+              button#btn_login.btn.btn-info(type='submit') 确定
+    
+    

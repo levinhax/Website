@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='keywords', content='html5,响应式,作品展示,个人作品展示,作品展示网站,levinhax')
+    meta(name='description', content='作品展示,个人作品展示,作品展示网站,levinhax,作品,网站,JavaScript,react,node,python,前端工程师')
+    title 相册
+    link(rel='stylesheet', type='text/css', href='/stylesheets/reset.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/base.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/photo.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js')
+  body
+    // 导航栏
+    nav#navbar.navbar
+      .nav-content
+        #nav-header
+          a(href='/') Levin
+        #menu-button
+          span
+          span
+          span
+        .clearfix
+        ul#menu-list
+          li
+            a(href='/') 首页
+          li
+            a(href='/blog') 日志
+          li
+            a(href='/project') 项目简介
+          li.active
+            a(href='/photo') 相册
+          li
+            a(href='/about') 关于
+    // 导航栏 end
+    // == photography section start ==
+    section.photography-section
+      .photography-title
+        h2 Funny Photo
+        .photography-menu
+          a(href='/photo') 首页
+          a(href='/photo/archive') 归档
+      .photography_list
+        p.list_header
+          span.list_item_circle
+          | 嗯...!目前共计
+          span #{photoCounts}
+          | 篇日志。继续努力
+        for photo in photos
+          .list_item
+            span.list_item_circle
+            span.list_item_date.photo_date #{photo.photoDate}
+            span.list_item_title
+              a(href="/photo/" + photo.photoId, target='_blank') #{photo.photoTitle}
+            span.list_item_tag #{photo.photoTag}
+    // == photography section end ==
+    // == footer content ==
+    footer
+      .contact_info
+        div 电话 : 15022387010
+        div 地址 : 天津市滨海新区
+        div 邮箱 : levin1229@163.com
+      .footer-copyright
+        | Copyright © 2017.Company name All rights reserved.
+    // == footer content end ==
+    script(src='/javascripts/navbar.js')
+    script(src='/javascripts/jquery-3.1.1.min.js')
+    script(src='/javascripts/photo.js')
+    script(src='/javascripts/formatTime.js')

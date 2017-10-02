@@ -1,0 +1,12 @@
+extends admin_layout.pug
+
+block content
+  #content
+      #nav_top
+        span.nav_title 首页
+        ul#nav_user
+          li
+            a(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body

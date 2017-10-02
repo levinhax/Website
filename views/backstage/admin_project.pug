@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title 后台管理
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/admin_layout.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/admin.css')
+  body
+    #nav_left
+      ul#nav_lists.nav.nav-stacked
+        li(role='presentation')
+          a(href='/admin')
+            span.glyphicon.glyphicon-home
+            | 首页
+        li.nav_list(role='presentation')
+          a(href='#dataManager', data-toggle='collapse')
+            span.glyphicon.glyphicon-file
+            | 数据管理
+            span.glyphicon.glyphicon-menu-down
+            span.glyphicon.glyphicon-menu-up.hidden
+        ul#dataManager.list_items.nav.collapse
+          li
+            a(href='/admin/article') 日志列表
+          li
+            a(href='#') 评论列表
+          li
+            a(href='/admin/project') 作品列表
+          li
+            a(href='/admin/photo') 相册列表
+          li
+            a(href='#') 用户列表
+          li
+            a(href='#') 管理员列表
+        li.nav_list(role='presentation')
+          a(href='#addData', data-toggle='collapse')
+            span.glyphicon.glyphicon-plus
+            | 添加数据
+            span.glyphicon.glyphicon-menu-down
+            span.glyphicon.glyphicon-menu-up.hidden
+        ul#addData.list_items.nav.collapse
+          li
+            a(href='/admin/article/add') 添加日志
+          li
+            a(href='/admin/project/add') 添加作品
+          li
+            a(href='/admin/photo/add') 添加相册
+        li.nav_list(role='presentation')
+          a(href='#diagram', data-toggle='collapse')
+            span.glyphicon.glyphicon-star
+            | 图表
+            span.glyphicon.glyphicon-menu-down
+            span.glyphicon.glyphicon-menu-up.hidden
+        ul#diagram.list_items.nav.collapse
+          li
+            a(href='#') 用户分布
+        li.nav_list(role='presentation')
+          a(href='#settings', data-toggle='collapse')
+            span.glyphicon.glyphicon-cog
+            | 设置
+            span.glyphicon.glyphicon-menu-down
+            span.glyphicon.glyphicon-menu-up.hidden
+        ul#settings.list_items.nav.collapse
+          li
+            a(href='/admin/usercenter') 个人中心
+        li.nav_list(role='presentation')
+          a(href='#explain', data-toggle='collapse')
+            span.glyphicon.glyphicon-exclamation-sign
+            | 说明
+            span.glyphicon.glyphicon-menu-down
+            span.glyphicon.glyphicon-menu-up.hidden
+        ul#explain.list_items.nav.collapse
+          li
+            a(href='/admin/explain') 说明
+    #content
+      #nav_top
+        span.nav_title 数据管理 / 作品列表
+        ul#nav_user
+          li
+            a#userName(href='/admin/usercenter') #{userName}
+          li
+            a(href='/user/login') 退出
+      #content_body
+        table.table.table-striped.table-hover.table-responsive
+          thead
+            tr.info
+              th #
+              th 作品标题
+              th 作品作者
+              th 作品日期
+              th 作品标签
+              th 作品图片
+              th 操作
+          tbody
+            for project in projects
+              tr
+                td #{project.projectId}
+                td #{project.projectTitle}
+                td#projectAuthor #{project.projectAuthor}
+                td #{project.projectTime}
+                td #{project.projectTag}
+                td #{project.projectPhoto}
+                td 
+                  a.delete.btn.btn-danger(data-id = project.projectId) 删除
+        // 分页
+        #paging
+          nav(aria-label='Page navigation')
+            ul.pagination
+              li
+                a.pre_page(href='#', aria-label='Previous')
+                  span(aria-hidden='true') «
+              each item, i in pagesArr
+                li
+                  a.page(data-id = (item)) #{item}
+              li
+                a.next_page(href='#', aria-label='Next')
+                  span(aria-hidden='true') »
+          #pageMsg
+            | 当前第
+            span.pageNow #{pageNow}
+            | 页,
+            | 共
+            span.pageCount #{pageCount}
+            | 页
+            |                         跳转到
+            input#pageVal(type='text')
+            | 页  
+            button#pageToBtn 跳转
+    block foot
+      script(src='/javascripts/jquery-3.1.1.min.js')
+      script(src='/javascripts/bootstrap.min.js')
+      script(src='/javascripts/admin_layout.js')
+      script(src='/javascripts/admin_project.js')
